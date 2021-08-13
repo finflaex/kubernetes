@@ -112,22 +112,6 @@ spec:
 
 ---
 
-apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: backend
-  namespace: msvc-ns
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: backend
-  minReplicas: 1
-  maxReplicas: 3
-  targetCPUUtilizationPercentage: 50
-
----
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -179,19 +163,3 @@ spec:
             requests:
               memory: "256Mi"
               cpu: "50m"
-
----
-
-apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: gateway
-  namespace: msvc-ns
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: gateway
-  minReplicas: 1
-  maxReplicas: 3
-  targetCPUUtilizationPercentage: 50
