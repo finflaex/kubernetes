@@ -117,8 +117,8 @@ kind: Deployment
 metadata:
   name: gateway
   labels: 
-    - tier: gateway 
-    - app: microservices
+    tier: gateway 
+    app: microservices
   namespace: msvc-ns
 spec:
   replicas: 1
