@@ -73,7 +73,7 @@ metadata:
     app: microservices
   namespace: msvc-ns
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       tier: backend
