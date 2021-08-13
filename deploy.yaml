@@ -1,4 +1,14 @@
 apiVersion: v1
+kind: Namespace
+metadata:
+  name: msvc-ns
+  labels:
+    name: msvc-ns
+    instance: msvc-ns
+
+---
+
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: urls-config
